@@ -3,13 +3,90 @@
 
 <head>
   <title>Duck Duck Clone</title>
-  <meta charset="utf-8">
-
+  <meta charset="utf-8" />
+  <title>Duck Duck Go</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/flexboxgrid.css" />
+  <link rel="stylesheet" href="css/font-awesome.css" />
   <!-- Leave these here!  They are for the evaluation  -->
-  <script src='./evaluation/init.js'></script>
+  <script src="./evaluation/init.js"></script>
+
+  <script>
+    var input = document.getElementById("input_txt");
+    input.addEventListener("keyup", function (event) {
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("btn_submit").click();
+      }
+    });
+  </script>
 </head>
 
 <body>
+  <!--HEADER-->
+  <header id="main-header">
+    <div class="container">
+      <div class="row end-sm end-md end-lg middle-xs middle-sm middle-md middle-lg">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+          <nav class="nav-bar">
+            <ul>
+              <li>
+                <a href="https://twitter.com/duckduckgo" class="fa fa-twitter current" title="twitter link"
+                  tabindex="0"></a>
+                <span>
+                  ></a>
+                  <a href="#" class="fa fa-angle-down" title="options" tabindex="1"></a>
+                </span>
+              </li>
+              <li><a href="#" class="fa fa-bars" title="settings" tabindex="2"></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <form action="post" action="search_results.html">
+    <!-- show case part 1 -->
+    <section id="showcase-1" aria-label="search section">
+      <div class="container">
+        <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1 class="fa fa-user" title="logo image">
+              <span class="first-text" title="logo name"> Duck Duck Go </span>
+            </h1>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" aria-label="search text">
+            <input class="search-input" type="text" placeholder="Search.." name="search" tabindex="3" id="input_txt" />
+            <button type="submit" class="search-link" aria-role="button" aria-label="click here to search" tabindex="4"
+              id="btn_submit">
+              <i class="fa fa-search " title="click to search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="showcase-2" aria-label="summary and rating section">
+      <div class="container">
+        <div class="row start-xs start-sm start-md start-lg">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h1 class="title">Privacy, simplified.</h1>
+            <p class="text-first">Add privacy protection to your browser.<br /> Search privately, block trackers, secure
+              connections, <br />and more — all for free.</p>
+            <button class="btn" type="button" name="button" title="add to firefox"> Add DuckDuckGo to Firefox</button>
+            <h6 class="text-second" aria-label="rating information">Trusted by millions worldwide
+              <br /><span class="fa fa-star checked text-stars"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              762 reviews</h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </form>
 </body>
 
 </html>
