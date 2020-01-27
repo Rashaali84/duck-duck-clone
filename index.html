@@ -1,202 +1,382 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <title>Duck Duck Clone</title>
+    <meta charset="utf-8" />
+    <title>Duck Duck Go</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/flexboxgrid.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="img/fav-icon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="img/fav-icon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="img/fav-icon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="img/fav-icon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="img/fav-icon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="img/fav-icon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="img/fav-icon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="img/fav-icon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/fav-icon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="img/fav-icon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/fav-icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="img/fav-icon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/fav-icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/fav-icon//manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="img/fav-icon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
 
-<head>
-  <title>Duck Duck Clone</title>
-  <meta charset="utf-8" />
-  <title>Duck Duck Go</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/flexboxgrid.css" />
-  <link rel="stylesheet" href="css/font-awesome.css" />
-  <link rel="apple-touch-icon" sizes="57x57" href="img/fav-icon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="img/fav-icon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/fav-icon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="img/fav-icon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/fav-icon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="img/fav-icon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="img/fav-icon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="img/fav-icon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/fav-icon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="img/fav-icon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/fav-icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="img/fav-icon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/fav-icon/favicon-16x16.png">
-  <link rel="manifest" href="img/fav-icon//manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="img/fav-icon/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+    <!-- Leave these here!  They are for the evaluation  -->
+    <script src="./evaluation/init.js"></script>
 
-  <!-- Leave these here!  They are for the evaluation  -->
-  <script src="./evaluation/init.js"></script>
+    <script>
+      var input = document.getElementById("input_txt");
+      input.addEventListener("keyup", function(event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          document.getElementById("btn_submit").click();
+        }
+      });
+    </script>
+  </head>
 
-  <script>
-    var input = document.getElementById("input_txt");
-    input.addEventListener("keyup", function (event) {
-      // Number 13 is the "Enter" key on the keyboard
-      if (event.keyCode === 13) {
-        event.preventDefault();
-        document.getElementById("btn_submit").click();
-      }
-    });
-  </script>
-</head>
-
-<body>
-  <!--HEADER-->
-  <header id="main-header">
-    <div class="container">
-      <div class="row end-sm end-md end-lg middle-xs middle-sm middle-md middle-lg">
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-          <nav class="nav-bar">
-            <ul>
-              <li>
-                <a href="https://twitter.com/duckduckgo" class="fa fa-twitter current" title="twitter link"
-                  tabindex="0"></a>
-                <span>
-                  </a>
-                  <a href="#" class="fa fa-angle-down" title="options" tabindex="1"></a>
-                </span>
-              </li>
-              <li><a href="#" class="fa fa-bars" title="settings" tabindex="2"></a></li>
-            </ul>
-          </nav>
+  <body>
+    <!--HEADER-->
+    <header id="main-header">
+      <div class="container">
+        <div
+          class="row end-sm end-md end-lg middle-xs middle-sm middle-md middle-lg"
+        >
+          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <nav class="nav-bar">
+              <ul>
+                <li>
+                  <a
+                    href="https://twitter.com/duckduckgo"
+                    class="fa fa-twitter current"
+                    title="twitter link"
+                    tabindex="1"
+                  ></a>
+                  <span>
+                    <a
+                      href="#"
+                      class="fa fa-angle-down"
+                      title="options"
+                      tabindex="2"
+                    ></a>
+                  </span>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="fa fa-bars"
+                    title="settings"
+                    tabindex="3"
+                  ></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-  <form action="post" action="search_results.html">
-    <!-- show case part 1 -->
-    <section id="showcase-1" aria-label="search section">
-      <div class="container">
-        <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1 class="fa fa-user" title="logo image">
-              <span class="first-text" title="logo name"> Duck Duck Go </span>
-            </h1>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" aria-label="search text">
-            <input class="search-input" type="text" placeholder="Search.." name="search" tabindex="3" id="input_txt" />
-            <button type="submit" class="search-link" aria-role="button" aria-label="click here to search" tabindex="4"
-              id="btn_submit">
-              <i class="fa fa-search " title="click to search"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="showcase-2" aria-label="summary and rating section">
-      <div class="container">
-        <div class="row start-xs start-sm start-md start-lg">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1 class="title">Privacy, simplified.</h1>
-            <p class="text-first">Add privacy protection to your browser.<br /> Search privately, block trackers, secure
-              connections, <br />and more — all for free.</p>
-            <button class="btn" type="button" name="button" title="add to firefox"> Add DuckDuckGo to Firefox</button>
-            <h6 class="text-second" aria-label="rating information">Trusted by millions worldwide
-              <br /><span class="fa fa-star checked text-stars"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-              762 reviews</h6>
+    </header>
+    <form method="post" action="search_results.html">
+      <!-- show case part 1 -->
+      <section id="showcase-1" aria-label="search section">
+        <div class="container">
+          <div
+            class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg"
+          >
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h1 class="fa fa-user" title="logo image">
+                <span class="first-text" title="logo name"> Duck Duck Go </span>
+              </h1>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <input
+                class="search-input"
+                type="text"
+                placeholder="Search.."
+                name="search"
+                tabindex="4"
+                id="input_txt"
+              />
+              <button
+                type="submit"
+                class="search-link"
+                aria-label="click here to search"
+                tabindex="5"
+                id="btn_submit"
+              >
+                <i class="fa fa-search " title="click to search"></i>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- features-->
-    <section id="features" aria-label="how it works steps">
-      <div class="container">
-        <div class="row center-xs center-sm center-md center-lg">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h2 class="title-features-main">How it works</h2>
-            <div class="row center-xs center-sm center-md center-lg">
-              <div class="col-xs-7 col-sm-3 col-md-3 col-lg-3 box">
-                <i class="fa fa-rocket icon-features"></i><br>
-                <h3>Add to Firefox</h3>
-                <p>Just a few clicks to install, and you're ready to go. It's that easy.</p>
-              </div>
-              <div class="col-xs-7 col-sm-3 col-md-3 col-lg-3 box">
-                <i class="fa fa-question-circle-o icon-features"></i><br>
-                <h3>Browse as Usual</h3>
-                <p>We'll block hidden trackers and encrypt connections to keep you more private.</p>
-              </div>
-              <div class="col-xs-7 col-sm-3 col-md-3 col-lg-3 box">
-                <i class="fa fa-rocket icon-features"></i><br>
-                <h3>Enjoy Peace of Mind</h3>
-                <p>DuckDuckGo Privacy Essentials protects your privacy, wherever the Internet takes you.</p>
+      </section>
+      <section id="showcase-2" aria-label="summary and rating section">
+        <div class="container">
+          <div class="row start-xs start-sm start-md start-lg">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h1 class="title">Privacy, simplified.</h1>
+              <p class="text-first">
+                Add privacy protection to your browser.<br />
+                Search privately, block trackers, secure connections, <br />and
+                more — all for free.
+              </p>
+              <button
+                class="btn"
+                type="button"
+                name="button"
+                title="add to firefox"
+              >
+                Add DuckDuckGo to Firefox
+              </button>
+              <h6 class="text-second" aria-label="rating information">
+                Trusted by millions worldwide <br /><span
+                  class="fa fa-star checked text-stars"
+                ></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                762 reviews
+              </h6>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- features-->
+      <section id="features" aria-label="how it works steps">
+        <div class="container">
+          <div class="row center-xs center-sm center-md center-lg">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h2 class="title-features-main">How it works</h2>
+              <div class="row center-xs center-sm center-md center-lg">
+                <div class="col-xs-7 col-sm-3 col-md-3 col-lg-3 box">
+                  <i class="fa fa-rocket icon-features"></i><br />
+                  <h3>Add to Firefox</h3>
+                  <p>
+                    Just a few clicks to install, and you're ready to go. It's
+                    that easy.
+                  </p>
+                </div>
+                <div class="col-xs-7 col-sm-3 col-md-3 col-lg-3 box">
+                  <i class="fa fa-question-circle-o icon-features"></i><br />
+                  <h3>Browse as Usual</h3>
+                  <p>
+                    We'll block hidden trackers and encrypt connections to keep
+                    you more private.
+                  </p>
+                </div>
+                <div class="col-xs-7 col-sm-3 col-md-3 col-lg-3 box">
+                  <i class="fa fa-rocket icon-features"></i><br />
+                  <h3>Enjoy Peace of Mind</h3>
+                  <p>
+                    DuckDuckGo Privacy Essentials protects your privacy,
+                    wherever the Internet takes you.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="features-green" aria-label="privacy features">
-      <div class="container">
-        <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1 class="title-features-green">We don’t store your personal information. Ever.</h1>
-            <h4 class="sub-title-features">Our privacy policy is simple: <br />we don’t collect or share any of your
-              personal
-              information.</h4>
-            <button class="btn-features" type="button" name="button" title="add to firefox">Add DuckDuckGo to
-              Firefox</button>
-            <div><img src="./img/monster.svg" alt="monster image for privacy" class="img-features"></div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    <section id="features-orange" aria-label="no ads feature">
-      <div class="container">
-        <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1 class="title-features">We don’t follow you around with ads.</h1>
-            <h4 class="sub-title-features">We don’t store your search history. <br /> We therefore have nothing
-              to sell to advertisers that track you across the Internet.</h4>
-            <button class="btn-features" type="button" name="button" title="click here to add it to firefox">Add
-              DuckDuckGo to Firefox</button>
-            <div> <img src="./img/ghost.svg" alt="no ads image" class="img-features"></div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    <section id="features-blue" aria-label="no tracking feature">
-      <div class="container">
-        <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1 class="title-features">We don’t track you in or out of private browsing mode.</h1>
-            <h4 class="sub-title-features">Other search engines track your searches even when you’re
-              in private browsing mode.<br /> We don’t track you — period.</h4>
-            <button class="btn-features" type="button" name="button" title="click here to add it to firefox">Add
-              DuckDuckGo to Firefox</button>
-            <div><img src="./img/bathtub.svg" alt="no track image" class="img-features"></div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    <section id="features-nile" aria-label="no track in private mode">
-      <div class="container">
-        <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
-
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="links-features"><a href="#">Dismiss forever</a><span style="color: white;"> | </span><a
-                href="#">Dismiss forever</a>
+      </section>
+      <section id="features-green" aria-label="privacy features">
+        <div class="container">
+          <div
+            class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg"
+          >
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h1 class="title-features-green">
+                We don’t store your personal information. Ever.
+              </h1>
+              <h4 class="sub-title-features">
+                Our privacy policy is simple: <br />we don’t collect or share
+                any of your personal information.
+              </h4>
+              <button
+                class="btn-features"
+                type="button"
+                name="button"
+                title="add to firefox"
+              >
+                Add DuckDuckGo to Firefox
+              </button>
+              <div>
+                <img
+                  src="./img/monster.svg"
+                  alt="monster image for privacy"
+                  class="img-features"
+                />
+              </div>
             </div>
-            <h1 class="title-features">We don’t track you in or out of private browsing mode.</h1>
-            <h4 class="sub-title-features">Other search engines track your searches <br />
-              even when you’re
-              in private browsing mode. We don’t track you — period.</h4>
-            <button class="btn-features" type="button" name="button" title="add it to firefox">Add DuckDuckGo to
-              Firefox</button>
-            <div><img src="./img/pinist.svg" alt="no track in private mode image" class="img-features"></div>
           </div>
         </div>
-      </div>
-
-    </section>
-  </form>
-</body>
-
+      </section>
+      <section id="features-orange" aria-label="no ads feature">
+        <div class="container">
+          <div
+            class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg"
+          >
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h1 class="title-features">
+                We don’t follow you around with ads.
+              </h1>
+              <h4 class="sub-title-features">
+                We don’t store your search history. <br />
+                We therefore have nothing to sell to advertisers that track you
+                across the Internet.
+              </h4>
+              <button
+                class="btn-features"
+                type="button"
+                name="button"
+                title="click here to add it to firefox"
+              >
+                Add DuckDuckGo to Firefox
+              </button>
+              <div>
+                <img
+                  src="./img/ghost.svg"
+                  alt="no ads image"
+                  class="img-features"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="features-blue" aria-label="no tracking feature">
+        <div class="container">
+          <div
+            class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg"
+          >
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <h1 class="title-features">
+                We don’t track you in or out of private browsing mode.
+              </h1>
+              <h4 class="sub-title-features">
+                Other search engines track your searches even when you’re in
+                private browsing mode.<br />
+                We don’t track you — period.
+              </h4>
+              <button
+                class="btn-features"
+                type="button"
+                name="button"
+                title="click here to add it to firefox"
+              >
+                Add DuckDuckGo to Firefox
+              </button>
+              <div>
+                <img
+                  src="./img/bathtub.svg"
+                  alt="no track image"
+                  class="img-features"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="features-nile" aria-label="no track in private mode">
+        <div class="container">
+          <div
+            class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg"
+          >
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="links-features">
+                <a href="#">Dismiss forever</a
+                ><span style="color: white;"> | </span
+                ><a href="#">Dismiss forever</a>
+              </div>
+              <h1 class="title-features">
+                We don’t track you in or out of private browsing mode.
+              </h1>
+              <h4 class="sub-title-features">
+                Other search engines track your searches <br />
+                even when you’re in private browsing mode. We don’t track you —
+                period.
+              </h4>
+              <button
+                class="btn-features"
+                type="button"
+                name="button"
+                title="add it to firefox"
+              >
+                Add DuckDuckGo to Firefox
+              </button>
+              <div>
+                <img
+                  src="./img/pinist.svg"
+                  alt="no track in private mode image"
+                  class="img-features"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+  </body>
 </html>
