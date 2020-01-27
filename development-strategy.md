@@ -2,11 +2,11 @@
 
 ## WireFrame
 
-> click here fot the wire-frame page https://wireframe.cc/U25NM3
+> Click here fot the wire-frame page https://wireframe.cc/U25NM3
 
 ## Steps Plan
 
-> add one row to this table for each user story you define
+> Add one row to this table for each user story you define
 
 | _Step Name_                | User Story                                                                                                       | Changes in HTML                                                                                     | Changes in CSS                                             |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
