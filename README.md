@@ -34,12 +34,15 @@ Explore...
 ## Features
 The project is divided into many steps as user-stories , please read DevelopmentStrategy.md for more details about each user story,
 Eech one of them is mapped to one branch as follows :
-| _Step Name_                | Branch Name                                                                                                    
-| **create-project-folders** | create-project-folders
-| **add-header-showcase**    | add-header-showcase
-| **add-features**           | add-features
-| **add-styles**             | add-style
-| **add-fav-icon**           | add-fav-icon
+
+| _Step Name_                | Branch Name |
+|----------------------------|-----------------------|
+| **create-project-folders** | create-project-folders|
+| **add-header-showcase**    | add-header-showcase|
+| **add-features**           | add-features|
+| **add-styles**             | add-style|
+| **add-fav-icon**           | add-fav-icon|
+
 
 ## Status
 Project is: finished as it is for learninig purpose.
